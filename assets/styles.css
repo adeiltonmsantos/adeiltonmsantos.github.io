@@ -17,6 +17,10 @@ body{
     color: #ffffff;
 }
 
+a{
+    text-decoration: none;
+}
+
 p{
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -67,7 +71,6 @@ span, ul li{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 3rem 2rem;
 }
 
 header img{
@@ -78,7 +81,6 @@ header img{
 #home{
     align-items: center;
     gap: 1rem;
-    padding: 3rem 2rem;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -93,7 +95,7 @@ header img{
     text-transform: uppercase;
 }
 
-#home div{
+#home div, #contact div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +103,7 @@ header img{
     padding: 2rem;
 }
 
-#home div img{
+#home div img, #contact div img{
     height: 3.5rem;
 }
 
@@ -125,7 +127,6 @@ header img{
 /* Projects section */
 #projects{
     gap: 4rem;
-    padding: 3rem 2rem;
     background-color: rgba(201, 174, 244, 0.1);
 }
 
@@ -170,7 +171,6 @@ header img{
 /* About Section */
 #about{
     gap: 4rem;
-    padding: 3rem 2rem;
     flex-direction: column;
     align-items: center;
 }
@@ -246,4 +246,42 @@ header img{
 #courses .academic-info-card ul{
     margin: 0;
     padding-left: 1.8rem;
+}
+
+/* Contact */
+#contact{
+    background-color: rgba(201, 174, 244, 0.1);
+    align-items: center;
+}
+
+#contact p{
+    width: 80%;
+    text-align: justify;
+}
+
+#contact div:nth-child(4){
+    background-color: rgba(201, 174, 244, 0.15);
+    width: 80%;
+    font-size: 2rem;
+}
+
+/* Common styles of some containers */
+header, #home, #projects, #about, #contact{
+    padding: 3rem 2rem;
+}
+
+/* Mobile menu */
+.mobile-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: rgb(112, 112, 112);
+}
+
+.mobile-menu img{
+    height: 3.5rem;
 }
