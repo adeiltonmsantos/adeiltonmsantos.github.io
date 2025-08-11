@@ -21,7 +21,6 @@ body{
 }
 
 p{
-    /* font-family: Abel; */
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
@@ -60,6 +59,12 @@ span, ul li{
     letter-spacing: 0.2rem;
 }
 
+/* Container section */
+.section-container{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Header section */
 
 header{
@@ -73,10 +78,7 @@ header img{
 }
 
 /* Home section */
-
 #home{
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding: 3rem 2rem;
@@ -108,8 +110,6 @@ header img{
 
 /* Skills section */
 #skills{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: stretch;
     gap: 1rem;
@@ -132,8 +132,6 @@ header img{
 
 /* Projects section */
 #projects{
-    display: flex;
-    flex-direction: column;
     gap: 4rem;
     padding: 3rem 2rem;
     background-color: rgba(201, 174, 244, 0.1);
@@ -182,7 +180,6 @@ header img{
 #about{
     gap: 4rem;
     padding: 3rem 2rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
