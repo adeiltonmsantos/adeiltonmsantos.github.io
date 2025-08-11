@@ -1,6 +1,8 @@
 /* Google Font Oswald */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Google Font Abel */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 html{
     margin: 0;
@@ -16,6 +18,11 @@ body{
     background-color: #06060D;
     font-family: Oswald;
     color: #ffffff;
+}
+
+p{
+    font-family: Abel;
+    font-size: 1.3rem;
 }
 
 /* h1, h2, h3, h4 */
@@ -64,7 +71,6 @@ header img{
 }
 
 #home p{
-    font-size: 1.5rem;
     text-align: center;
     font-weight: normal;
     width: 28.3rem;
@@ -116,7 +122,7 @@ header img{
     background-color: rgba(201, 174, 244, 0.1);
 }
 
-.project-card{
+.project-card, #academic-info, #jobs{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,4 +159,71 @@ header img{
     color: #ffffff;
     border: none;
     border-radius: 1rem;
+}
+
+/* About Section */
+#about{
+    gap: 4rem;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about > img{
+    height: 15.5rem;
+}
+
+#about > p{
+    width: 80%;
+}
+
+#about > div{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+#about > div > img{
+    height: 3.5rem;
+}
+
+/* academic-info */
+#academic-info{
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.academic-info-card, .job-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(143, 143, 143, 0.1);
+    width: 100%;
+}
+
+.academic-grade, .job-experience{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: Abel;
+    font-size: 1rem;
+}
+
+.academic-grade img, .job-experience img{
+    height: 2rem;
+}
+
+/* jobs */
+.job-card ul, .job-card p{
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    padding-left: 2rem;
+}
+
+.job-card p{
+    padding-left: 0;
+    text-align: justify;
 }
