@@ -25,6 +25,7 @@ p{
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.15rem;
+    text-align: justify;
 }
 
 /* h1, h2, h3, h4 */
@@ -186,6 +187,12 @@ header img{
     align-items: center;
 }
 
+#about > div{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
 #about > img{
     height: 15.5rem;
 }
@@ -228,7 +235,7 @@ header img{
 }
 
 .academic-grade img, .job-experience img{
-    height: 2rem;
+    height: 3rem;
 }
 
 /* jobs */
