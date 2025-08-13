@@ -231,7 +231,13 @@ header img{
     gap: 2rem;
     padding: 2rem;
     background-color: rgba(143, 143, 143, 0.1);
-    width: 100%;
+    /* width: 100%; */
+}
+
+.academic-list-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .academic-grade, .job-experience{
@@ -246,6 +252,13 @@ header img{
 }
 
 /* jobs */
+.job-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
 .job-card ul, .job-card p{
     margin: 0;
     padding: 0;
@@ -378,6 +391,28 @@ header, #projects, #about{
         flex-direction: row;
         align-items: flex-start;
         padding: 4rem;
+    }
+
+    #about p{
+        width: 60%;
+    }
+
+    #about div{
+        justify-content: center;
+    }
+
+    .academic-info{
+        flex-direction: column;
+    }
+
+    .academic-list-cards{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 4rem;
+    }
+
+    .academic-info-card{
+        align-items: flex-start;
     }
 
 }
