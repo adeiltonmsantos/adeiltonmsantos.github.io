@@ -150,7 +150,7 @@ header img{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 4rem 0;
     border-top: 0.1rem solid #888686;
 }
 
@@ -158,23 +158,28 @@ header img{
     height: 15.5rem;
 }
 
-.project-card > div{
+.project-card-resume{
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
     align-items: center;
 }
 
-.project-card p{
+.project-card-resume p{
     width: 80%;
     text-align: justify;
     text-transform: uppercase;
 }
 
-.project-card > div img{
+.project-card-icons{
+    display: flex;
+    gap: 2rem
+}
+
+.project-card-icons img{
     height: 3.5rem;
 }
 
-.project-card > div button{
+.project-card-icons button{
     height: 3.5rem;
     width: 12rem;
     background-color:rgba(99, 63, 171, 0.8);
@@ -312,6 +317,7 @@ header, #projects, #about{
     align-items: center;
     color: white;
     padding: 0.5rem;
+    cursor: pointer;
 }
 
 .menu-item:hover{
@@ -339,7 +345,39 @@ header, #projects, #about{
         top: 0;
     }
 
-    #home{
+    #home, #projects{
         padding-top: 10rem;
     }
+
+    #skills{
+        align-items: center;
+    }
+
+    #skills > div{
+        width: 30%;
+    }
+    
+    .card.project-card:nth-child(odd){
+        flex-direction: row-reverse;
+        align-items: flex-end;
+    }
+
+    .card.project-card:nth-child(odd) .project-card-resume{
+        align-items: flex-end;
+    }
+    
+    .card.project-card:nth-child(even){
+        justify-content: center;
+    }
+
+    .card.project-card:nth-child(even) .project-card-resume{
+        align-items: flex-start;
+    }
+
+    .project-card{
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 4rem;
+    }
+
 }
