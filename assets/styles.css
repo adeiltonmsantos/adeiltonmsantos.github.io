@@ -1,6 +1,38 @@
 /* Google Font Oswald */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Luckiest+Guy&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Paletas de cores disponíveis */
+
+:root, :root[data-theme="dark"]{
+    --bg-body: #06060D;
+    --bg-body-lighter: rgba(128, 128, 128, 0.10);
+    --bg-header: #06060D;
+    --bg-menu-desktop: #7070707d;
+    --bg-menu-mobile: #252525;
+    --bg-home: #ffffff15;
+    --bg-section: #06060d1a;
+    --bg-card: #8f8f8f1a;
+    --bg-contact-banner: #06060d1a;
+    --border-color: #888686;
+    --font-color-body: #ffffff;
+    --font-color-banner: #ffffff;
+}
+
+:root[data-theme="light"]{
+    --bg-body: #61628da5;
+    --bg-body-lighter: #61628d44;
+    --bg-header: #050549;
+    --bg-menu-desktop: #7070707d;
+    --bg-menu-mobile: #171726;
+    --bg-home: #ffffff15;
+    --bg-section: #06060d1a;
+    --bg-card: #8f8f8f1a;
+    --bg-contact-banner: #06060d1a;
+    --border-color: #3b3b3b;
+    --font-color-body: #06060D;
+    --font-color-banner: #ffffff;
+}
+
 html{
     margin: 0;
     padding: 0;
@@ -12,9 +44,9 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: #06060D;
+    background-color: var(--bg-body);
     font-family: Oswald;
-    color: #ffffff;
+    color: var(--font-color-body);
 }
 
 ul, li{
@@ -24,7 +56,7 @@ ul, li{
 }
 
 i{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: white
 }
 
@@ -82,7 +114,9 @@ span, ul li{
 header{
     display: flex;
     justify-content: space-between;
-    background-color: #06060D;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: var(--bg-header);
     box-sizing: border-box;
     width: 100%;
 }
@@ -95,8 +129,8 @@ header img{
 #home{
     align-items: center;
     gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-top: 0;
+    background-color: var(--bg-body-lighter);
+    padding: 0 0 2rem;
 }
 
 #home > img{
@@ -110,7 +144,7 @@ header img{
     text-transform: uppercase;
 }
 
-#home div, #contact div{
+#contact div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,6 +162,11 @@ header img{
     align-items: stretch;
     gap: 4rem;
     padding: 2rem;
+    background-color: var(--bg-header);
+}
+
+#skills h1{
+    color: var(--font-color-banner);
 }
 
 #skills > div{
@@ -142,7 +181,7 @@ header img{
 /* Projects section */
 #projects{
     gap: 4rem;
-    background-color: rgba(201, 174, 244, 0.1);
+    background-color: var(--bg-body-lighter);
 }
 
 .card{
@@ -151,7 +190,7 @@ header img{
     align-items: center;
     gap: 2rem;
     padding: 4rem 0;
-    border-top: 0.1rem solid #888686;
+    border-top: 0.1rem solid var(--border-color);
 }
 
 .project-card > img{
@@ -172,7 +211,9 @@ header img{
 
 .project-card-icons{
     display: flex;
-    gap: 2rem
+    gap: 1rem;
+    background-color: var(--bg-menu-desktop);
+    padding: 2rem;
 }
 
 .project-card-icons img{
@@ -195,23 +236,11 @@ header img{
     align-items: center;
 }
 
-#about > div{
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-}
-
 #about > img{
     height: 15.5rem;
 }
 
 #about > p{
-    width: 80%;
-}
-
-#about > div{
-    display: flex;
-    justify-content: flex-start;
     width: 80%;
 }
 
@@ -300,8 +329,9 @@ header img{
 
 /* Contact */
 #contact{
-    background-color: rgba(201, 174, 244, 0.1);
+    background-color: var(--bg-body-lighter);
     align-items: center;
+    gap: 2rem;
     padding: 2rem 0 10rem;
 }
 
@@ -317,11 +347,16 @@ header img{
 }
 
 /* Common styles of some containers */
-header, #projects, #about{
+#projects, #about{
     padding: 3rem 2rem;
 }
 
 /* Mobile menu, Desktop menu */
+.mobile-menu{
+    background-color: var(--bg-menu-mobile);
+    position: fixed;
+    bottom: 0;
+}
 .mobile-menu ul{
     display: flex;
     justify-content: space-between;
@@ -329,12 +364,13 @@ header, #projects, #about{
     position: fixed;
     bottom: 0;
     box-sizing: border-box;
-    padding: 2rem;
-    background-color: rgb(112, 112, 112);
+    padding: 1rem;
+    background-color: var(--bg-menu-mobile);
 }
 
 .desktop-menu{
     display: none;
+    background-color: var(--bg-menu-desktop);
 }
 
 .desktop-menu-list{
@@ -359,13 +395,40 @@ header, #projects, #about{
     height: 3.5rem;
 }
 
+.icons-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.icons-social-banner{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 50%;
+}
 
 @media screen and (min-width: 768px) {
+    
+    /* Icons banner */
+    .icons-banner {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        gap: 10rem;
+    }
+
+    .icons-social-banner{
+        width: 22rem;
+    }
 
     /* Desktop Menu */
     .desktop-menu {
         display: flex;
-        width: 60%;
+        max-width: 50rem;
     }
 
 
@@ -378,7 +441,17 @@ header, #projects, #about{
 
     header{
         position: fixed;
+        display: flex;
+        height: 8rem;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: flex-end;
+        /* padding: 2rem; */
         top: 0;
+    }
+
+    #home{
+        padding-bottom: 2rem;
     }
 
     /* Estilos comuns a #home, #projects e #about */
@@ -391,6 +464,7 @@ header, #projects, #about{
 
     #skills{
         align-items: center;
+        background-color: var(--bg-header);
     }
 
     #skills > div{
@@ -427,10 +501,6 @@ header, #projects, #about{
         max-width: 60%;
     }
 
-    #about div{
-        justify-content: center;
-    }
-
     .academic-info{
         flex-direction: column;
     }
@@ -443,6 +513,11 @@ header, #projects, #about{
 
     .academic-info-card{
         align-items: flex-start;
+    }
+
+    #contact p{
+        width: 40%;
+        text-align: center;
     }
 
 }
