@@ -5,31 +5,27 @@
 
 :root, :root[data-theme="dark"]{
     --bg-body: #06060D;
-    --bg-body-lighter: rgba(128, 128, 128, 0.10);
+    --bg-body-lighter: rgba(128, 128, 128, 0.199);
     --bg-header: #06060D;
     --bg-menu-desktop: #7070707d;
     --bg-menu-mobile: #252525;
-    --bg-home: #ffffff15;
-    --bg-section: #06060d1a;
     --bg-card: #8f8f8f1a;
-    --bg-contact-banner: #06060d1a;
+    --bg-banner: #06060d1a;
     --border-color: #888686;
     --font-color-body: #ffffff;
     --font-color-banner: #ffffff;
 }
 
 :root[data-theme="light"]{
-    --bg-body: #61628da5;
-    --bg-body-lighter: #61628d44;
-    --bg-header: #050549;
-    --bg-menu-desktop: #7070707d;
-    --bg-menu-mobile: #171726;
-    --bg-home: #ffffff15;
-    --bg-section: #06060d1a;
-    --bg-card: #8f8f8f1a;
-    --bg-contact-banner: #06060d1a;
+    --bg-body: #D9D9D9;
+    --bg-body-lighter: #F2F2F2;
+    --bg-header: #3F4859;
+    --bg-menu-desktop: #d9d9d917;
+    --bg-menu-mobile: #0B1426;
+    --bg-card: #3f485960;
+    --bg-banner: #73737375;
     --border-color: #3b3b3b;
-    --font-color-body: #06060D;
+    --font-color-body: #0B1426;
     --font-color-banner: #ffffff;
 }
 
@@ -113,8 +109,8 @@ span, ul li{
 
 header{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     background-color: var(--bg-header);
     box-sizing: border-box;
@@ -212,8 +208,9 @@ header img{
 .project-card-icons{
     display: flex;
     gap: 1rem;
-    background-color: var(--bg-menu-desktop);
+    background-color: var(--bg-banner);
     padding: 2rem;
+    border-radius: 2rem;
 }
 
 .project-card-icons img{
@@ -223,7 +220,8 @@ header img{
 .project-card-icons button{
     height: 3.5rem;
     width: 12rem;
-    background-color:rgba(99, 63, 171, 0.8);
+    background-color:var(--bg-header);
+    font-weight: bold;
     color: #ffffff;
     border: none;
     border-radius: 1rem;
@@ -274,7 +272,7 @@ header img{
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    background-color: rgba(143, 143, 143, 0.1);
+    background-color: var(--bg-card);
 }
 
 .academic-list-cards{
@@ -340,9 +338,10 @@ header img{
     text-align: justify;
 }
 
-#contact div:nth-child(4){
-    background-color: rgba(201, 174, 244, 0.15);
-    width: 80%;
+.banner-email{
+    background-color: var(--bg-header);
+    color: var(--font-color-banner);
+    width: 40rem;
     font-size: 2rem;
 }
 
@@ -411,14 +410,20 @@ header img{
     width: 50%;
 }
 
+.icons-social-banner i{
+    font-size: 4rem;
+    color: var(--font-color-body);
+}
+
 @media screen and (min-width: 768px) {
     
     /* Icons banner */
     .icons-banner {
         display: flex;
         justify-content: center;
+        width: fit-content;
         padding: 0;
-        gap: 10rem;
+        gap: 2rem;
     }
 
     .icons-social-banner{
@@ -438,16 +443,13 @@ header img{
     }
 
     /* header */
-
     header{
         position: fixed;
+        top: 0;
         display: flex;
+        justify-content: space-between;
         height: 8rem;
         box-sizing: border-box;
-        justify-content: center;
-        align-items: flex-end;
-        /* padding: 2rem; */
-        top: 0;
     }
 
     #home{
