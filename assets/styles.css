@@ -376,8 +376,6 @@ header img{
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    position: fixed;
-    bottom: 0;
     box-sizing: border-box;
     padding: 1rem;
     background-color: var(--bg-menu-mobile);
