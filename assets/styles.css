@@ -370,7 +370,7 @@ header img{
 .mobile-menu{
     background-color: var(--bg-menu-mobile);
     position: fixed;
-    bottom: 0;
+    bottom: 0.1rem;
 }
 .mobile-menu ul{
     display: flex;
