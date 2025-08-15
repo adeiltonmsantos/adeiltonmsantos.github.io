@@ -187,12 +187,14 @@ header img{
     color: var(--font-color-banner);
 }
 
-#skills > div{
+.skills-icons-list{
+    flex-direction: column;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-#skills > div > img{
+.skills-icon img{
     height: 3.5rem;
 }
 
