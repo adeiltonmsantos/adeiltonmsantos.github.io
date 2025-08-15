@@ -29,6 +29,12 @@
     --font-color-banner: #ffffff;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html{
     margin: 0;
     padding: 0;
@@ -368,17 +374,26 @@ header img{
 
 /* Mobile menu, Desktop menu */
 .mobile-menu{
+    display: flex;
     background-color: var(--bg-menu-mobile);
+    width: 100vw;
     position: fixed;
-    bottom: 0.1rem;
+    bottom: 0;
 }
+
 .mobile-menu ul{
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     padding: 1rem;
     background-color: var(--bg-menu-mobile);
+}
+
+.menu-item-label{
+    font-size: 1rem;
+    color: var(--font-color-banner);
+    margin-top: 0.3rem;
 }
 
 .desktop-menu{
@@ -402,10 +417,6 @@ header img{
 .menu-item:hover{
     background-color: rgba(173, 216, 230, 0.46);
     transition: all 1s ease;
-}
-
-.mobile-menu img{
-    height: 3.5rem;
 }
 
 .icons-banner{
