@@ -194,6 +194,11 @@ header img{
     width: fit-content;
 }
 
+.skills-icons-list div{
+    display: flex;
+    justify-content: center;
+}
+
 .skills-icon{
     height: 3.5rem;
 }
@@ -496,8 +501,9 @@ header img{
         background-color: var(--bg-header);
     }
 
-    #skills > div{
-        width: 30%;
+    .skills-icons-list{
+        width: 48rem;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     
     /* Seção Projetos */
